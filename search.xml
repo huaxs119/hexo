@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2Fhexo%2F2018%2F12%2F28%2Ftest%2F</url>
+    <content type="text"><![CDATA[$\sum_i^1$]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[java基础知识]]></title>
     <url>%2Fhexo%2F2018%2F12%2F28%2Fjava%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[java的环境 jre: java运行环境jre = java虚拟机（JVM）+ 核心类库（辅助java虚拟机运行的文件） jdk：java开发工具集jdk = jre + java开发工具 jdk目录 bin：存放java的开发工具db：JDK附带的一个轻量级的数据库，叫做Derbyjre：java运行环境lib：核心类库src.zip：java源代码 环境变量 classpath：java类文件的目录path：程序文件bin目录JAVA_HOME：java主目录 注释的种类 单行注释：//注释多行注释：/&lowast; 注释 &lowast;/文档注释：/&lowast;&lowast; 注释 &lowast;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@author 作者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@version 版本&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@param 方法的参数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@return 返回值 转义符 转义字符 名称 \b Backspace(退格键) \t Tab \n 换行 \r 回车 \\ 反斜杠 \‘ 单引号 \“ 双引号 常量和变量常量是指在程序运行过程中，值是固定不变的变量指的是指向一段存储地址]]></content>
