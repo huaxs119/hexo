@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[测试]]></title>
-    <url>%2Fhexo%2F2019%2F01%2F04%2F%E6%B5%8B%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[graph TD; A–&gt;B; A–&gt;C; B–&gt;D; C–&gt;D; 123title:这是一个例子participant 网页participant 商品详情服务器 as a 三只青蛙 第一只青蛙 第二只青蛙st=>start: 开始 e=>end: 结束 op=>operation: 我的操作 cond=>condition: 确认？ st->op->cond cond(yes)->e cond(no)->op{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[java数组]]></title>
     <url>%2Fhexo%2F2019%2F01%2F03%2Fjava%E6%95%B0%E7%BB%84%2F</url>
-    <content type="text"><![CDATA[数组定义同一种类型数据的集合，其实就是一个容器。数组一旦定义，那么里边存储的数据类型也就确定了。 数组可以自动给元素编号，方便操作元素。创建数组之后不能修改数组的大小，可以使用length属性获取数组的大小。 格式元素类型[] 数组名 = new 元素类型[元素个数或数组长度];int[] arr = new int[5]; 元素类型[] 数组名 = new 元素类型[]{元素,元素,…..};int[] arr = new int[]{3,5,1,7};int[] arr = {3,5,1,7}]]></content>
+    <content type="text"><![CDATA[数组定义同一种类型数据的集合，其实就是一个容器。数组一旦定义，那么里边存储的数据类型也就确定了。 数组可以自动给元素编号，方便操作元素。创建数组之后不能修改数组的大小，可以使用length属性获取数组的大小。 格式元素类型[] 数组名 = new 元素类型[元素个数或数组长度];int[] arr = new int[5]; 元素类型[] 数组名 = new 元素类型[]{元素,元素,…..};int[] arr = new int[]{3,5,1,7};int[] arr = {3,5,1,7} 数组的遍历12345678public class demo&#123; public static void main(String[] args)&#123; int[] x = &#123;1,2,3&#125;; for (int i = 0 ; i &lt; x.length ; i++)&#123; System.out.println(x[i]); &#125; &#125;&#125; 数组的常见异常角标越界1234567public class demo&#123; public static void main(String[] args)&#123; int[] x = &#123;1,2,3&#125;; System.out.println(x[3]); //java.lang.ArrayIndexOutOfBoundsException:3 &#125;&#125; 空指针异常12345678public class demo&#123; public static void main(String[] args)&#123; int[] x = &#123;1,2,3&#125;; x = null; System.out.println(x[1]); //java.lang.NullPointerException &#125;&#125; 内存分析栈内存特点：存储局部变量，变量使用完，自动释放。堆内存特点：存储的是数组和对象，凡是new关键字创建的实体都保存在堆内存里面，每一个对象都有一个内存首地址，对象都有默认的初始值。 数组的方法遍历：toString()将数组的元素以字符串的形式返回排序：sort()将数组按照升序排列二分查找：binarySearch在指定数组中查找元素，返回元素的索引，如果没有找到返回-1123456789101112public class demo&#123; public static void main(String[] args)&#123; int[] arr = &#123;2,45,12,3,6,23,12,53,32,15&#125; System.out.println(Arrays.toString(arr)); Arrays.sort(arr); System.out.println(Arrays.toString(arr)); System.out.println(Arrays.binarySearch(arr,12)); &#125;&#125; 二维数组实质就是存储的一维数组 数组类型[][] 数组名 = new 数组类型[一维数组的个数][每个一维数组中的元素个数] 属猪类型[][] 数组名 = new 数组类型{元素1,元素2},{元素1,元素2,元素3},{元素1,元素2}]]></content>
       <categories>
         <category>开发</category>
       </categories>

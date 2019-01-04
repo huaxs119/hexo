@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="酵母农场">
 <meta property="og:description" content="数组定义同一种类型数据的集合，其实就是一个容器。数组一旦定义，那么里边存储的数据类型也就确定了。 数组可以自动给元素编号，方便操作元素。创建数组之后不能修改数组的大小，可以使用length属性获取数组的大小。 格式元素类型[] 数组名 = new 元素类型[元素个数或数组长度];int[] arr = new int[5]; 元素类型[] 数组名 = new 元素类型[]{元素,元素,…..};i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-03T09:20:15.139Z">
+<meta property="og:updated_time" content="2019-01-04T06:35:40.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java数组">
 <meta name="twitter:description" content="数组定义同一种类型数据的集合，其实就是一个容器。数组一旦定义，那么里边存储的数据类型也就确定了。 数组可以自动给元素编号，方便操作元素。创建数组之后不能修改数组的大小，可以使用length属性获取数组的大小。 格式元素类型[] 数组名 = new 元素类型[元素个数或数组长度];int[] arr = new int[5]; 元素类型[] 数组名 = new 元素类型[]{元素,元素,…..};i">
@@ -378,6 +378,14 @@
 <p>数组可以自动给元素编号，方便操作元素。创建数组之后不能修改数组的大小，可以使用length属性获取数组的大小。</p>
 <h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><p>元素类型[] 数组名 = new 元素类型[元素个数或数组长度];<br><code>int[] arr = new int[5];</code></p>
 <p>元素类型[] 数组名 = new 元素类型[]{元素,元素,…..};<br><code>int[] arr = new int[]{3,5,1,7};</code><br><code>int[] arr = {3,5,1,7}</code></p>
+<h2 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] x = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; x.length ; i++)&#123;</span><br><span class="line">            System.out.println(x[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数组的常见异常"><a href="#数组的常见异常" class="headerlink" title="数组的常见异常"></a>数组的常见异常</h2><h3 id="角标越界"><a href="#角标越界" class="headerlink" title="角标越界"></a>角标越界</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] x = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        System.out.println(x[<span class="number">3</span>]);</span><br><span class="line">        <span class="comment">//java.lang.ArrayIndexOutOfBoundsException:3</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="空指针异常"><a href="#空指针异常" class="headerlink" title="空指针异常"></a>空指针异常</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] x = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">        x = <span class="keyword">null</span>;</span><br><span class="line">        System.out.println(x[<span class="number">1</span>]);</span><br><span class="line">        <span class="comment">//java.lang.NullPointerException</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h2><p><strong>栈内存特点</strong>：存储局部变量，变量使用完，自动释放。<br><strong>堆内存特点</strong>：存储的是数组和对象，凡是new关键字创建的实体都保存在堆内存里面，每一个对象都有一个内存首地址，对象都有默认的初始值。</p>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><p>遍历：<code>toString()</code>将数组的元素以字符串的形式返回<br>排序：<code>sort()</code>将数组按照升序排列<br>二分查找：<code>binarySearch</code>在指定数组中查找元素，返回元素的索引，如果没有找到返回-1<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">2</span>,<span class="number">45</span>,<span class="number">12</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">23</span>,<span class="number">12</span>,<span class="number">53</span>,<span class="number">32</span>,<span class="number">15</span>&#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line"></span><br><span class="line">        Arrays.sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line"></span><br><span class="line">        System.out.println(Arrays.binarySearch(arr,<span class="number">12</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>实质就是存储的一维数组</p>
+<p>数组类型[][] 数组名 = new 数组类型[一维数组的个数][每个一维数组中的元素个数]</p>
+<p>属猪类型[][] 数组名 = new 数组类型{元素1,元素2},{元素1,元素2,元素3},{元素1,元素2}</p>
 
       
     </div>
@@ -417,10 +425,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/hexo/2019/01/04/测试/" rel="prev" title="测试">
-                测试 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -497,7 +501,7 @@
               
                 <a href="/hexo/archives">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -552,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组定义"><span class="nav-number">1.</span> <span class="nav-text">数组定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式"><span class="nav-number">2.</span> <span class="nav-text">格式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组定义"><span class="nav-number">1.</span> <span class="nav-text">数组定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式"><span class="nav-number">2.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的遍历"><span class="nav-number">3.</span> <span class="nav-text">数组的遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的常见异常"><span class="nav-number">4.</span> <span class="nav-text">数组的常见异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#角标越界"><span class="nav-number">4.1.</span> <span class="nav-text">角标越界</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空指针异常"><span class="nav-number">4.2.</span> <span class="nav-text">空指针异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存分析"><span class="nav-number">5.</span> <span class="nav-text">内存分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的方法"><span class="nav-number">6.</span> <span class="nav-text">数组的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">7.</span> <span class="nav-text">二维数组</span></a></li></ol></div>
             
 
           </div>
