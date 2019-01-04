@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[测试]]></title>
     <url>%2Fhexo%2F2019%2F01%2F04%2F%E6%B5%8B%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[123sequenceDiagramA-&gt;&gt;B: 是否已收到消息？B--&gt;&gt;A: 已收到消息 123456graph TDA[模块A] --&gt;|A1| B(模块B)B --&gt; C&#123;判断条件C&#125;C --&gt;|条件C1| D[模块D]C --&gt;|条件C2| E[模块E]C --&gt;|条件C3| F[模块F] 123456789gantttitle 甘特图dateFormat YYYY-MM-DDsection 项目A任务1 :a1, 2018-06-06, 30d任务2 :after a1 , 20dsection 项目B任务3 :2018-06-12 , 12d任务4 : 24d]]></content>
+    <content type="text"><![CDATA[graph TD; A–&gt;B; A–&gt;C; B–&gt;D; C–&gt;D; st=>start: 开始 e=>end: 结束 op=>operation: 我的操作 cond=>condition: 确认？ st->op->cond cond(yes)->e cond(no)->op{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
   </entry>
   <entry>
     <title><![CDATA[java数组]]></title>

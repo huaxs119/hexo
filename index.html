@@ -352,8 +352,14 @@
       
         
           
-          123sequenceDiagramA-&gt;&gt;B: 是否已收到消息？B--&gt;&gt;A: 已收到消息
-123456graph TDA[模块A] --&gt;|A1| B(模块B)B --&gt; C&#123;判断条件C&#125;C --&gt;|条件C1| D[模块D]C --&
+          graph TD;    A–&gt;B;    A–&gt;C;    B–&gt;D;    C–&gt;D;
+st=>start: 开始
+e=>end: 结束
+op=>operation: 我的操作
+cond=>condition: 确认？
+
+st->op->cond
+cond(yes)->e
           ...
           <!--noindex-->
           <div class="post-button text-center">
