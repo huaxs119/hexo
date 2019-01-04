@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[测试]]></title>
     <url>%2Fhexo%2F2019%2F01%2F04%2F%E6%B5%8B%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[graph TD; A–&gt;B; A–&gt;C; B–&gt;D; C–&gt;D; st=>start: 开始 e=>end: 结束 op=>operation: 我的操作 cond=>condition: 确认？ st->op->cond cond(yes)->e cond(no)->op{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
+    <content type="text"><![CDATA[graph TD; A–&gt;B; A–&gt;C; B–&gt;D; C–&gt;D; sequence title:这是一个例子 participant 网页 participant 商品详情服务器 as ast=>start: 开始 e=>end: 结束 op=>operation: 我的操作 cond=>condition: 确认？ st->op->cond cond(yes)->e cond(no)->op{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12} var code = document.getElementById("flowchart-0-code").value; var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value)); var diagram = flowchart.parse(code); diagram.drawSVG("flowchart-0", options);]]></content>
   </entry>
   <entry>
     <title><![CDATA[java数组]]></title>

@@ -353,13 +353,14 @@
         
           
           graph TD;    A–&gt;B;    A–&gt;C;    B–&gt;D;    C–&gt;D;
-st=>start: 开始
-e=>end: 结束
-op=>operation: 我的操作
-cond=>condition: 确认？
 
-st->op->cond
-cond(yes)->e
+
+sequence
+title:这是一个例子
+participant 网页
+participant 商品详情服务器 as ast=>start: 开始
+e=>end: 结束
+op=>
           ...
           <!--noindex-->
           <div class="post-button text-center">
