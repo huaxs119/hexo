@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法,">
+  <meta name="keywords" content="java,算法,">
 
 
 
@@ -79,15 +79,18 @@
 
 
 
-<meta name="keywords" content="算法">
+<meta name="description" content="排序直接排序1234567891011121314151617181920//用当前角标上的元素和后面的所有元素进行比较public class demo&amp;#123;    public static void mian(String[] args)&amp;#123;        int[] arr = &amp;#123;4,2,64,34,12,45&amp;#125;;        selectSort(ar">
+<meta name="keywords" content="java,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="程序算法">
 <meta property="og:url" content="https://huaxs119.coding.me/hexo/2019/01/03/程序算法/index.html">
 <meta property="og:site_name" content="酵母农场">
+<meta property="og:description" content="排序直接排序1234567891011121314151617181920//用当前角标上的元素和后面的所有元素进行比较public class demo&amp;#123;    public static void mian(String[] args)&amp;#123;        int[] arr = &amp;#123;4,2,64,34,12,45&amp;#125;;        selectSort(ar">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-03T09:19:59.205Z">
+<meta property="og:updated_time" content="2019-01-04T07:41:07.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序算法">
+<meta name="twitter:description" content="排序直接排序1234567891011121314151617181920//用当前角标上的元素和后面的所有元素进行比较public class demo&amp;#123;    public static void mian(String[] args)&amp;#123;        int[] arr = &amp;#123;4,2,64,34,12,45&amp;#125;;        selectSort(ar">
 
 
 
@@ -371,7 +374,10 @@
       
 
       
-        
+        <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="直接排序"><a href="#直接排序" class="headerlink" title="直接排序"></a>直接排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用当前角标上的元素和后面的所有元素进行比较</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mian</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">4</span>,<span class="number">2</span>,<span class="number">64</span>,<span class="number">34</span>,<span class="number">12</span>,<span class="number">45</span>&#125;;</span><br><span class="line">        selectSort(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>;x&lt;arr.length-<span class="number">1</span>;x++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> y=x+<span class="number">1</span>;y&lt;arr.length;y++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[x]&gt;arr[y])&#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = arr[x];</span><br><span class="line">                    arr[x] = arr[y];</span><br><span class="line">                    arr[y] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//相邻的元素进行比较</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">4</span>,<span class="number">2</span>,<span class="number">64</span>,<span class="number">34</span>,<span class="number">12</span>,<span class="number">45</span>&#125;;</span><br><span class="line">        bubbleSort(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>;x&lt;arr.length-<span class="number">1</span>;x++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> y=<span class="number">0</span>;y&lt;arr.length-x-<span class="number">1</span>;y++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[y]&gt;arr[y+<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = arr[y];</span><br><span class="line">                    arr[y] = arr[y+<span class="number">1</span>];</span><br><span class="line">                    arr[y+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二分法查找"><a href="#二分法查找" class="headerlink" title="二分法查找"></a>二分法查找</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//只对有序的数组有效</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">14</span>,<span class="number">16</span>,<span class="number">22</span>,<span class="number">26</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> a = halfSearch(arr,<span class="number">22</span>);</span><br><span class="line">        System.out.println(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">halfSearch</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> min = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max = arr.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = (min+max)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span>(arr[mid]!=key)&#123;</span><br><span class="line">            <span class="keyword">if</span>(key&gt;arr[mid])&#123;</span><br><span class="line">                min = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (key&lt;arr[mid])&#123;</span><br><span class="line">                max = mid -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            mid = (max+min)/<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数组翻转"><a href="#数组翻转" class="headerlink" title="数组翻转"></a>数组翻转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">4</span>,<span class="number">2</span>,<span class="number">64</span>,<span class="number">34</span>,<span class="number">12</span>,<span class="number">45</span>&#125;;</span><br><span class="line">        reverseArray(arr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">reverseArray</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> start=<span class="number">0</span>,end=arr.length-<span class="number">1</span>;start&lt;end;start++,end--)&#123;</span><br><span class="line">            swap(arr,start,end);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(arr))</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = arr[a];</span><br><span class="line">        arr[a]=arr[b];</span><br><span class="line">        arr[b]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -387,6 +393,8 @@
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/hexo/tags/java/" rel="tag"># java</a>
           
             <a href="/hexo/tags/算法/" rel="tag"># 算法</a>
           
@@ -465,8 +473,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -481,7 +498,7 @@
               
                 <a href="/hexo/archives">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -503,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/hexo/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -526,6 +543,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接排序"><span class="nav-number">1.1.</span> <span class="nav-text">直接排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.2.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分法查找"><span class="nav-number">1.3.</span> <span class="nav-text">二分法查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组翻转"><span class="nav-number">1.4.</span> <span class="nav-text">数组翻转</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

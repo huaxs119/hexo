@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java封装]]></title>
+    <url>%2Fhexo%2F2019%2F01%2F04%2Fjava%E5%B0%81%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[不使用封装，很容易赋值错误，并且任何人都可以更改，造成信息的不安全 封装的实现设置类的属性为privatepublic成员修饰符，公共的，谁都可以访问 private成员修饰符，私有的，只有自己可以访问 使用set、get方法12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849class Employee&#123; private String name; private String id; private String gender; public String getName()&#123; return name; &#125; public void setName(String name)&#123; this.name = name; &#125; public String getId()&#123; return id; &#125; public void setId(String id)&#123; this.id = id; &#125; public String gender()&#123; return gender; &#125; public void setGender(String gender)&#123; if("男".equal(gender)||"女".equal(gender))&#123; this.gender = gender; &#125;else&#123; System.out.println("请输入\"男\"或者\"女\""); &#125; &#125; public void work()&#123; &#125;&#125;---------------------------------------------------------------public class demo&#123; public static void mian(String[] args)&#123; Employee e = new Employee(); e.setId("007"); e.setName("jame"); e.setGender("男"); System.out.println(e.getId()); System.out.println(e.getName()); System.out.println(e.getGender()); e.work(); &#125;&#125; 封装的好处 隐藏了类的具体实现 操作简单 提高对象数据的安全性]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java数组]]></title>
     <url>%2Fhexo%2F2019%2F01%2F03%2Fjava%E6%95%B0%E7%BB%84%2F</url>
     <content type="text"><![CDATA[数组定义同一种类型数据的集合，其实就是一个容器。数组一旦定义，那么里边存储的数据类型也就确定了。 数组可以自动给元素编号，方便操作元素。创建数组之后不能修改数组的大小，可以使用length属性获取数组的大小。 格式元素类型[] 数组名 = new 元素类型[元素个数或数组长度];int[] arr = new int[5]; 元素类型[] 数组名 = new 元素类型[]{元素,元素,…..};int[] arr = new int[]{3,5,1,7};int[] arr = {3,5,1,7} 数组的遍历12345678public class demo&#123; public static void main(String[] args)&#123; int[] x = &#123;1,2,3&#125;; for (int i = 0 ; i &lt; x.length ; i++)&#123; System.out.println(x[i]); &#125; &#125;&#125; 数组的常见异常角标越界1234567public class demo&#123; public static void main(String[] args)&#123; int[] x = &#123;1,2,3&#125;; System.out.println(x[3]); //java.lang.ArrayIndexOutOfBoundsException:3 &#125;&#125; 空指针异常12345678public class demo&#123; public static void main(String[] args)&#123; int[] x = &#123;1,2,3&#125;; x = null; System.out.println(x[1]); //java.lang.NullPointerException &#125;&#125; 内存分析栈内存特点：存储局部变量，变量使用完，自动释放。堆内存特点：存储的是数组和对象，凡是new关键字创建的实体都保存在堆内存里面，每一个对象都有一个内存首地址，对象都有默认的初始值。 数组的方法遍历：toString()将数组的元素以字符串的形式返回排序：sort()将数组按照升序排列二分查找：binarySearch在指定数组中查找元素，返回元素的索引，如果没有找到返回-1123456789101112public class demo&#123; public static void main(String[] args)&#123; int[] arr = &#123;2,45,12,3,6,23,12,53,32,15&#125; System.out.println(Arrays.toString(arr)); Arrays.sort(arr); System.out.println(Arrays.toString(arr)); System.out.println(Arrays.binarySearch(arr,12)); &#125;&#125; 二维数组实质就是存储的一维数组 数组类型[][] 数组名 = new 数组类型[一维数组的个数][每个一维数组中的元素个数] 属猪类型[][] 数组名 = new 数组类型{元素1,元素2},{元素1,元素2,元素3},{元素1,元素2}]]></content>
@@ -8,17 +19,18 @@
         <category>开发</category>
       </categories>
       <tags>
-        <tag>数组</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[程序算法]]></title>
     <url>%2Fhexo%2F2019%2F01%2F03%2F%E7%A8%8B%E5%BA%8F%E7%AE%97%E6%B3%95%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[排序直接排序1234567891011121314151617181920//用当前角标上的元素和后面的所有元素进行比较public class demo&#123; public static void mian(String[] args)&#123; int[] arr = &#123;4,2,64,34,12,45&#125;; selectSort(arr); &#125; public static void selectSort(int[] arr)&#123; for(int x=0;x&lt;arr.length-1;x++)&#123; for(int y=x+1;y&lt;arr.length;y++)&#123; if(arr[x]&gt;arr[y])&#123; int temp = arr[x]; arr[x] = arr[y]; arr[y] = temp; &#125; &#125; &#125; System.out.println(Arrays.toString(arr)); &#125;&#125; 冒泡排序1234567891011121314151617181920//相邻的元素进行比较public class demo&#123; public static void main(String[] args)&#123; int[] arr = &#123;4,2,64,34,12,45&#125;; bubbleSort(arr); &#125; public static void bubbleSort(int[] arr)&#123; for(int x=0;x&lt;arr.length-1;x++)&#123; for(int y=0;y&lt;arr.length-x-1;y++)&#123; if(arr[y]&gt;arr[y+1])&#123; int temp = arr[y]; arr[y] = arr[y+1]; arr[y+1] = temp; &#125; &#125; &#125; System.out.println(Arrays.toString(arr)); &#125;&#125; 二分法查找1234567891011121314151617181920212223//只对有序的数组有效public class demo&#123; public static void main(String[] args)&#123; int[] arr = &#123;2,4,7,8,9,14,16,22,26&#125;; int a = halfSearch(arr,22); System.out.println(a); &#125; public static int halfSearch(int[] arr,int key)&#123; int min = 0; int max = arr.length-1; int mid = (min+max)/2; while(arr[mid]!=key)&#123; if(key&gt;arr[mid])&#123; min = mid + 1; &#125;else if (key&lt;arr[mid])&#123; max = mid -1; &#125; mid = (max+min)/2; &#125; return mid; &#125;&#125; 数组翻转12345678910111213141516171819public class demo&#123; public static void main(String[] args)&#123; int[] arr = &#123;4,2,64,34,12,45&#125;; reverseArray(arr); &#125; public static void reverseArray(int[] arr)&#123; for (int start=0,end=arr.length-1;start&lt;end;start++,end--)&#123; swap(arr,start,end); &#125; System.out.println(Arrays.toString(arr)) &#125; public static void swap(int arr[],int a,int b)&#123; int temp = arr[a]; arr[a]=arr[b]; arr[b]=temp; &#125;&#125;]]></content>
       <categories>
         <category>开发</category>
       </categories>
       <tags>
+        <tag>java</tag>
         <tag>算法</tag>
       </tags>
   </entry>
