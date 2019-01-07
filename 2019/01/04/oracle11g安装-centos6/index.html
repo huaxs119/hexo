@@ -97,7 +97,31 @@
 <meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-17-24-56.png">
 <meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-17-26-00.png">
 <meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-17-26-16.png">
-<meta property="og:updated_time" content="2019-01-04T09:26:53.912Z">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-35-20.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-36-16.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-36-39.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-53-55.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-58-35.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-59-01.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-22-59-47.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-02-53.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-03-36.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-04-45.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-08-21.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-09-40.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-11-08.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-05-10-03-49.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-13-19.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-14-59.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-15-39.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-05-10-06-30.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-18-28.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-18-42.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-04-23-19-08.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-05-10-17-12.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-05-10-21-26.png">
+<meta property="og:image" content="http://pic.ddyeast.com/2019-01-05-10-23-06.png">
+<meta property="og:updated_time" content="2019-01-05T02:23:27.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="oracle11g安装(centos6)">
 <meta name="twitter:description" content="关闭防火墙123service iptables statusservice iptables stopchkconfig iptables off 关闭selinuxvim /etc/selinux/config 设置网络vim /etc/hosts 上传安装包上传oracle安装包并解压12unzip linux.x64_11gR2_database_1of2.zipunzip linux.x">
@@ -412,7 +436,29 @@
 <p>  fs.aio-max-nr 同时可以拥有的的异步IO请求数目<br>  fs.file-max  进程可以同时打开的最大句柄数，这个参数直接限制最大并发连接数<br>  kernel.shmall  共享内存总量，单位页，页的大小是4K   2097152<em>4k/1024/1024 = 8G<br>  kernel.shmmax  单个进程(process)能使用的共享内存段的最大尺寸(Bytes为单位)， 一般需要根据物理内存修改，尽量让整个SGA在共享内存段中 。<br>  kernel.shmmni  设置系统范围内共享内存段的最大数量。该参数的默认值是 4096。此值也是在系统中可以启动的Oracle实例的最大数量,通常不需要更改。<br>  kernel.sem  表示设置的信号量，四个参数分别是：SEMMSL.每个信号集中的最大信号量数目。SEMMNS.系统范围内的最大信号量总数目。SEMOPM.每个信号发生时的最大系统操作数目。SEMMNI.系统范围内的最大信号集总数目。SEMMNS=SEMMSL</em>SEMMNI<br>  net.ipv4.ip_local_port_range    可使用的IPv4端口范围<br>  net.core.rmem_default   接收套接字缓冲区大小的默认值(以字节为单位)。<br>  net.core.rmem_max   接收套接字缓冲区大小的最大值(以字节为单位)。<br>  net.core.wmem_default   发送套接字缓冲区大小的默认值(以字节为单位)。<br>  net.core.wmem_max   发送套接字缓冲区大小的最大值(以字节为单位)。</p>
 </blockquote>
 <h2 id="安装oracle程序"><a href="#安装oracle程序" class="headerlink" title="安装oracle程序"></a>安装oracle程序</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">用xshell连接需要设置DISPLAY参数</span><br><span class="line">在root用户下执行 <span class="built_in">export</span> DISPLAY=客户端ip:0.0</span><br><span class="line"></span><br><span class="line">正常流程需要在root下执行</span><br><span class="line">xhost +</span><br><span class="line">su - oracle     切换到oracle用户</span><br><span class="line"><span class="built_in">cd</span> /tmp/database    切换到解压的目录</span><br><span class="line">./runInstaller</span><br></pre></td></tr></table></figure>
-<p><img src="http://pic.ddyeast.com/2019-01-04-17-16-28.png" alt="2019-01-04-17-16-28"><br><img src="http://pic.ddyeast.com/2019-01-04-17-23-52.png" alt="2019-01-04-17-23-52"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-20.png" alt="2019-01-04-17-24-20"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-31.png" alt="2019-01-04-17-24-31"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-43.png" alt="2019-01-04-17-24-43"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-56.png" alt="2019-01-04-17-24-56"><br><img src="http://pic.ddyeast.com/2019-01-04-17-26-00.png" alt="2019-01-04-17-26-00"><br><img src="http://pic.ddyeast.com/2019-01-04-17-26-16.png" alt="2019-01-04-17-26-16"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-17-16-28.png" alt="2019-01-04-17-16-28"><br><img src="http://pic.ddyeast.com/2019-01-04-17-23-52.png" alt="2019-01-04-17-23-52"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-20.png" alt="2019-01-04-17-24-20"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-31.png" alt="2019-01-04-17-24-31"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-43.png" alt="2019-01-04-17-24-43"><br><img src="http://pic.ddyeast.com/2019-01-04-17-24-56.png" alt="2019-01-04-17-24-56"><br><img src="http://pic.ddyeast.com/2019-01-04-17-26-00.png" alt="2019-01-04-17-26-00"><br><img src="http://pic.ddyeast.com/2019-01-04-17-26-16.png" alt="2019-01-04-17-26-16"><br><img src="http://pic.ddyeast.com/2019-01-04-22-35-20.png" alt="2019-01-04-22-35-20"><br><img src="http://pic.ddyeast.com/2019-01-04-22-36-16.png" alt="2019-01-04-22-36-16"><br><img src="http://pic.ddyeast.com/2019-01-04-22-36-39.png" alt="2019-01-04-22-36-39"><br><img src="http://pic.ddyeast.com/2019-01-04-22-53-55.png" alt="2019-01-04-22-53-55"></p>
+<h2 id="命令建库"><a href="#命令建库" class="headerlink" title="命令建库"></a>命令建库</h2><p>在oracle用户下输入<code>dbca</code><br><img src="http://pic.ddyeast.com/2019-01-04-22-58-35.png" alt="2019-01-04-22-58-35"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-22-59-01.png" alt="2019-01-04-22-59-01"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-22-59-47.png" alt="2019-01-04-22-59-47"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-02-53.png" alt="2019-01-04-23-02-53"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-03-36.png" alt="2019-01-04-23-03-36"></p>
+<p>这个地方点击下一步会弹出提示，需要先运行监听程序<br><img src="http://pic.ddyeast.com/2019-01-04-23-04-45.png" alt="2019-01-04-23-04-45"></p>
+<p>在Oracle用户下输入<code>lsnrctl status</code>检查监听器的状态<br><img src="http://pic.ddyeast.com/2019-01-04-23-08-21.png" alt="2019-01-04-23-08-21"></p>
+<p>如果如上图所示，则还未运行监听，输入<code>lsnrctl start</code>启动监听<br><img src="http://pic.ddyeast.com/2019-01-04-23-09-40.png" alt="2019-01-04-23-09-40"><br>回到dbca建库界面就可以通过刚才那一步了</p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-11-08.png" alt="2019-01-04-23-11-08"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-05-10-03-49.png" alt="2019-01-05-10-03-49"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-13-19.png" alt="2019-01-04-23-13-19"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-14-59.png" alt="2019-01-04-23-14-59"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-15-39.png" alt="2019-01-04-23-15-39"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-05-10-06-30.png" alt="2019-01-05-10-06-30"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-18-28.png" alt="2019-01-04-23-18-28"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-18-42.png" alt="2019-01-04-23-18-42"></p>
+<p><img src="http://pic.ddyeast.com/2019-01-04-23-19-08.png" alt="2019-01-04-23-19-08"></p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>在oracle用户下输入<code>ps -ef | grep ora_</code><br><img src="http://pic.ddyeast.com/2019-01-05-10-17-12.png" alt="2019-01-05-10-17-12"></p>
+<p>登录sqlplus<br><code>sqlplus / as sysdba</code><br>输入<code>select status from v$instance;</code>查询实例状态</p>
+<p><img src="http://pic.ddyeast.com/2019-01-05-10-21-26.png" alt="2019-01-05-10-21-26"></p>
+<p>输入<code>select open_mode from v$database;</code>查看打开模式</p>
+<p><img src="http://pic.ddyeast.com/2019-01-05-10-23-06.png" alt="2019-01-05-10-23-06"></p>
 
       
     </div>
@@ -452,6 +498,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo/2019/01/05/python流程控制/" rel="prev" title="python流程控制">
+                python流程控制 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -528,7 +578,7 @@
               
                 <a href="/hexo/archives">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -583,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭防火墙"><span class="nav-number">1.</span> <span class="nav-text">关闭防火墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭selinux"><span class="nav-number">2.</span> <span class="nav-text">关闭selinux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置网络"><span class="nav-number">3.</span> <span class="nav-text">设置网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传安装包"><span class="nav-number">4.</span> <span class="nav-text">上传安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装linux工具包"><span class="nav-number">5.</span> <span class="nav-text">安装linux工具包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立用户及配置环境变量"><span class="nav-number">6.</span> <span class="nav-text">建立用户及配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置系统参数"><span class="nav-number">7.</span> <span class="nav-text">配置系统参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装oracle程序"><span class="nav-number">8.</span> <span class="nav-text">安装oracle程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭防火墙"><span class="nav-number">1.</span> <span class="nav-text">关闭防火墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭selinux"><span class="nav-number">2.</span> <span class="nav-text">关闭selinux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置网络"><span class="nav-number">3.</span> <span class="nav-text">设置网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传安装包"><span class="nav-number">4.</span> <span class="nav-text">上传安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装linux工具包"><span class="nav-number">5.</span> <span class="nav-text">安装linux工具包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立用户及配置环境变量"><span class="nav-number">6.</span> <span class="nav-text">建立用户及配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置系统参数"><span class="nav-number">7.</span> <span class="nav-text">配置系统参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装oracle程序"><span class="nav-number">8.</span> <span class="nav-text">安装oracle程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令建库"><span class="nav-number">9.</span> <span class="nav-text">命令建库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证"><span class="nav-number">10.</span> <span class="nav-text">验证</span></a></li></ol></div>
             
 
           </div>
@@ -603,7 +653,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019-01-04</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019-01-07</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
