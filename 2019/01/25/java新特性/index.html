@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="酵母农场">
 <meta property="og:description" content="静态导入静态导入语法用于导入类的某个静态属性或者方法，使用静态导入可以简化程序对类静态属性和方法的调用 语法import static 包名.类名.静态属性|静态方法|*例如12import static java.lang.System.outimport static java.lang.Math.* 注意的事项：如果静态导入的成员与本类的成员存在同名的情况下，那么默认使用本来的静态成员，如果">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-25T03:36:11.887Z">
+<meta property="og:updated_time" content="2019-01-26T07:39:03.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java新特性">
 <meta name="twitter:description" content="静态导入静态导入语法用于导入类的某个静态属性或者方法，使用静态导入可以简化程序对类静态属性和方法的调用 语法import static 包名.类名.静态属性|静态方法|*例如12import static java.lang.System.outimport static java.lang.Math.* 注意的事项：如果静态导入的成员与本类的成员存在同名的情况下，那么默认使用本来的静态成员，如果">
@@ -412,6 +412,85 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Sex&#123;</span><br><span class="line">    man(<span class="string">"男"</span>)&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"男人在跑。。。"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,woman(<span class="string">"女"</span>)&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"女人在跑。。。。"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;  <span class="comment">//枚举值</span></span><br><span class="line"></span><br><span class="line">    String value; <span class="comment">//成员变量</span></span><br><span class="line">    <span class="comment">//构造函数</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Sex</span><span class="params">(String value)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.value = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//成员函数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getValue</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"value:"</span>+value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">---------------------------------------------------</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(Sting[] args)</span></span>&#123;</span><br><span class="line">        Sex sex = Sex.man;   <span class="comment">//获取到了枚举类的对象</span></span><br><span class="line">        sex.value = <span class="string">"男"</span>;</span><br><span class="line">        sex.getValue();</span><br><span class="line">        sex.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//季节枚举类</span></span><br><span class="line"><span class="keyword">enum</span> Season&#123;</span><br><span class="line">    spring,summer,antumn,winter;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">--------------------------------------------------</span><br><span class="line"><span class="keyword">enum</span> Person&#123;</span><br><span class="line">    Student,worker;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">--------------------------------------------------</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Season season = Season.summer;</span><br><span class="line">        <span class="keyword">switch</span>(season)&#123;</span><br><span class="line">            <span class="keyword">case</span> spring:</span><br><span class="line">                System.out.println(<span class="string">"春天..."</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> summer:</span><br><span class="line">                System.out.println(<span class="string">"夏天..."</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> antumn:</span><br><span class="line">                System.out.println(<span class="string">"秋天..."</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> winter:</span><br><span class="line">                System.out.println(<span class="string">"冬天..."</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        List list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        list.add(<span class="string">"1"</span>);</span><br><span class="line">        list.add(<span class="string">"4"</span>);</span><br><span class="line">        list.add(<span class="string">"3"</span>);</span><br><span class="line">        list.add(<span class="string">"7"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//因为2是最后一个元素了，也就是删除后没有在调用了迭代器的next方法</span></span><br><span class="line">        Iterator&lt;String&gt; it = list.iterator();</span><br><span class="line">        <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">            String s = it.next();</span><br><span class="line">            <span class="keyword">if</span>(<span class="string">"1"</span>.equals(s))&#123;</span><br><span class="line">                list.remove(<span class="string">"1"</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自动装箱-拆箱"><a href="#自动装箱-拆箱" class="headerlink" title="自动装箱/拆箱"></a>自动装箱/拆箱</h2><ul>
+<li>自动装箱：指开发人员可以把一个基本数据类型直接赋给对应的包装类</li>
+<li>自动拆箱：指开发人员可以把一个包装类对象直接赋给对应的基本数据类型</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>包装类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+</tr>
+</tbody>
+</table>
+<p>将基本数据类型封装成对象的好处在于可以在对象中定义更多的功能方法操作该数据<br>所属的包 java.lang.*</p>
+<p>应用</p>
+<ul>
+<li><p>最大值<br><code>Integer.MAX_VALUE</code> 整数类型最大值</p>
+</li>
+<li><p>最小值<br><code>Integer.MIN_VALUE</code> 整数类型最小值</p>
+</li>
+<li><p>基本数据类型转成字符串</p>
+<ul>
+<li>基本数据类型+””;</li>
+<li>基本数据类型.toString(基本数据类型值);<br><code>Integer.toString(34)</code>  将34转为”34”</li>
+</ul>
+</li>
+<li><p>字符串转换成基本数据类型<br><code>Integer.parseInt(&quot;123&quot;)</code><br><code>Double.parseDouble(&quot;3.14&quot;)</code></p>
+</li>
+<li><p>进制转换</p>
+<ul>
+<li>十进制转二进制<br><code>Integer.toBinaryString(int i)</code> 以二进制无符号整数形式返回一个字符串表示形式</li>
+<li>十进制转十六进制<br><code>Integer.toHexString(int i)</code></li>
+<li>十进制转八进制<br><code>Integer.toOctalString(int i)</code> </li>
+<li>其他进制转换为十进制<br><code>Integer.parseInt(String str,2)</code> 二进制转十进制<br><code>Integer.parseInt(String str,8)</code> 八进制转十进制<br><code>Integer.parseInt(String str,16)</code> 十六进制转十进制</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -450,6 +529,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexo/2019/01/26/正则表达式/" rel="prev" title="正则表达式">
+                正则表达式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -526,7 +609,7 @@
               
                 <a href="/hexo/archives">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -581,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态导入"><span class="nav-number">1.</span> <span class="nav-text">静态导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增强for循环"><span class="nav-number">2.</span> <span class="nav-text">增强for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可变参数"><span class="nav-number">3.</span> <span class="nav-text">可变参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式"><span class="nav-number">3.1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">3.2.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.3.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举"><span class="nav-number">4.</span> <span class="nav-text">枚举</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式-1"><span class="nav-number">4.1.</span> <span class="nav-text">格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#细节"><span class="nav-number">5.</span> <span class="nav-text">细节</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态导入"><span class="nav-number">1.</span> <span class="nav-text">静态导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增强for循环"><span class="nav-number">2.</span> <span class="nav-text">增强for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可变参数"><span class="nav-number">3.</span> <span class="nav-text">可变参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式"><span class="nav-number">3.1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">3.2.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">3.3.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举"><span class="nav-number">4.</span> <span class="nav-text">枚举</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#格式-1"><span class="nav-number">4.1.</span> <span class="nav-text">格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#细节"><span class="nav-number">5.</span> <span class="nav-text">细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动装箱-拆箱"><span class="nav-number">6.</span> <span class="nav-text">自动装箱/拆箱</span></a></li></ol></div>
             
 
           </div>
@@ -601,7 +684,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019-01-26</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019-02-20</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
